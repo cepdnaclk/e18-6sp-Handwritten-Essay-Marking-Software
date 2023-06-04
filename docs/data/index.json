@@ -6,9 +6,9 @@
             "eNumber": "E/yy/xxx"
         },
         {
-            "name": "Team Member Name 2",
-            "email": "email@eng.pdn.ac.lk",
-            "eNumber": "E/yy/xxx"
+            "name": "Shehan Madhusanka",
+            "email": "e18203@eng.pdn.ac.lk",
+            "eNumber": "E/18/203"
         },
         {
             "name": "Team Member Name 3",
@@ -18,13 +18,9 @@
     ],
     "supervisors": [
         {
-            "name": "Dr. Supervisor 1",
-            "email": "email@eng.pdn.ac.lk"
-        },
-        {
-            "name": "Supervisor 2",
-            "email": "email@eng.pdn.ac.lk"
+            "name": "Mr. Sampath Deegalla",
+            "email": "sampath@eng.pdn.ac.lk"
         }
     ],
-    "tags": []
+    "tags": ["Machine Learning", "Web", "NLP"]
 }
