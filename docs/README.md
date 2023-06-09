@@ -9,7 +9,7 @@ title:
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
-# Project Title
+# Handwritten Essay Marking Software
 
 ---
 
@@ -19,9 +19,9 @@ This is a sample image, to show how to add images to your page. To learn more op
 
 
 ## Team
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
+-  E/18/118, Haritha Gunarathna, [e18118@eng.pdn.ac.lk](mailto:e18118@eng.pdn.ac.lk)
+-  E/18/203, Shehan Madhusanka, [e18203@eng.pdn.ac.lk](mailto:e18203@eng.pdn.ac.lk)
+-  E/18/264, Prasanna N.W.G.L.M., [e18264@eng.pdn.ac.lk](mailto:e18264@eng.pdn.ac.lk)
 
 ## Table of Contents
 1. [Introduction](#introduction)
