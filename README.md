@@ -11,7 +11,20 @@ ___
 
 ## Aim
 Design and develop a web interface to automate the process of grading handwritten essays by leveraging machine learning algorithms while ensuring fairness and consistency in evaluations.
+ 
+## Objectives
 
++ Develop a user friendly web interface to display the results
++ Develop a ML model to auto grade the essays considering the following criteria
+  - Grammer
+  - Spelling
+  - Relevance
+  - Typography
+  - Duplication
++ Predict the grade with acceptable accuracy
++ Maintain an up-to-date database
+
+## Solution Architecture
 
 
 ## Team
