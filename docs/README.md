@@ -49,11 +49,15 @@ The dataset we are using is ‘The Hewlett Foundation: Automated Essay Scoring D
 
 ## High Level Solutions Architecture Diagram
 
-![High Level Diagram](./images/high_level.png)
+<!-- ![High Level Diagram](./images/high_level.png) -->
+<p align="center">
+<img src="./images/high_level.png"  width="800" height="300" ></p>
 
 ## Use Case Diagram
 
-![Use Case Diagram](./images/use_case.png)
+<!-- ![Use Case Diagram](./images/use_case.png) -->
+<p align="center">
+<img src="./images/use_case.png"  width="800" height="550" ></p>
 
 ## Technology Stack
 
@@ -66,15 +70,18 @@ The dataset we are using is ‘The Hewlett Foundation: Automated Essay Scoring D
 ## Machine Learning Algorithm
 
 - Data Preprocessing
-  In the initial phase, we performed standard preprocessing steps, such as handling null values and selecting relevant features from the dataset. We addressed data skewness through normalization techniques and cleaned the essays by removing unnecessary symbols, stop words, and punctuation. Additional features, including sentence count, word count, character count, and average word length, were incorporated to improve accuracy. We also utilized part-of-speech tagging to extract noun, verb, adjective, and adverb counts, as well as identified misspelled words through corpus comparison. The refined dataset was then subjected to various machine learning algorithms for further analysis.
-  Processed dataset can be found in the file, **_Processed_data.csv_**
+   * In the initial phase, we performed standard preprocessing steps, such as handling null values and selecting relevant features from the dataset. We addressed data skewness through normalization techniques and cleaned the essays by removing unnecessary symbols, stop words, and punctuation. Additional features, including sentence count, word count, character count, and average word length, were incorporated to improve accuracy. We also utilized part-of-speech tagging to extract noun, verb, adjective, and adverb counts, as well as identified misspelled words through corpus comparison. The refined dataset was then subjected to various machine learning algorithms for further analysis.
+Processed dataset can be found in the file, **_Processed_data.csv_**
 
 - Applying Machine Learning Algorithms
-  To prepare the data for machine learning algorithms, we used CountVectorizer to convert the essays into numeric form. Initially, we applied linear regression, SVR, and Random Forest without the additional features, resulting in high mean squared error. However, after including the extra features and reapplying CountVectorizer, the performance notably improved, particularly for Random Forest.
+   * To prepare the data for machine learning algorithms, we used CountVectorizer to convert the essays into numeric form. Initially, we applied linear regression, SVR, and Random Forest without the additional features, resulting in high mean squared error. However, after including the extra features and reapplying CountVectorizer, the performance notably improved, particularly for Random Forest.
 
 ## Project Timeline
 
-![Timeline](./images/project_workflow.png)
+<!-- ![Timeline](./images/project_workflow.png) -->
+<p align="center">
+<img src="./images/project_workflow.png"  width="800" height="450" ></p>
+
 
 ## Team
 
