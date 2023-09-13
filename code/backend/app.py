@@ -6,6 +6,9 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import datetime
 import pickle
 
+import Predictor
+from Predictor import predictMarks
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '22e2ea1408a8454eb96aa303d3e29424'
 app.config['JWT_TOKEN_LOCATION'] = ['headers', 'cookies']
@@ -113,7 +116,7 @@ def predict():
         #----------------------------------
         # prediction = model.predict([doc])
         #----------------------------------
-        prediction = 80
+        prediction = predictMarks(doc)
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
