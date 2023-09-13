@@ -51,20 +51,21 @@ def main():
     if "results" not in st.session_state:
         st.session_state.results = list()
 
-    # st.header("Chat with multiple PDFs :books:")
-    # st.text_input("Ask a question about your documents:")
+    # # get user inputs through a sidebar
+    # name = st.sidebar.text_input("Student Name: ")
+    # email = st.sidebar.text_input("Email Address: ")
+    # st.sidebar.subheader("Your Documents")
+    # pdf_docs = st.sidebar.file_uploader("Upload your Images here and click on 'Process'",accept_multiple_files=True)
 
-    # put things inside sidebar
-    # swith st.sidebar:
     st.header("Handwritten Essay Marking Software")
 
     name = st.text_input("Student Name: ")
     email = st.text_input("Email Address: ")
     st.subheader("Your Documents")
     images = st.file_uploader("Upload your Images here and click on 'Process'",accept_multiple_files=True)
-    
+ 
     # Page title
-    st.subheader("Student Result Card")
+    st.markdown("## <span style='font-size: 24px; font-weight: normal;'>Student Result Card</span>", unsafe_allow_html=True)
 
     # Process button
     if st.button("Process"):
@@ -78,15 +79,11 @@ def main():
                 print(text_data)
 
 
-        display_data()
-        # Display result cards
-        # for i, result in enumerate(st.session_state.results):
-        #     st.subheader(f"Result Card {i+1}")
-        #     st.write(f"Name: {result[0]}")
-        #     st.write(f"Email: {result[1]}")
-        #     st.write(f"Result: {result[2]}%")
-        #     st.write("---")
+        display_data() 
 
+    
 
 if __name__ == '__main__':
     main()
+
+        
