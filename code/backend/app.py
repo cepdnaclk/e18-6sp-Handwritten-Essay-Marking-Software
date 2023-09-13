@@ -4,6 +4,7 @@ from flask_jwt_extended import JWTManager, jwt_required, create_access_token, ge
 from pymongo import MongoClient
 from werkzeug.security import generate_password_hash, check_password_hash
 import datetime
+import pickle
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '22e2ea1408a8454eb96aa303d3e29424'
@@ -21,16 +22,27 @@ db = client['6SP-database']
 
 # Create a collection for teachers
 teachers = db['teacherss']
-student = db['students']
+students = db['students']
 
 # Setup Flask-JWT-Extended
 jwt = JWTManager(app)
 
-# User model
-class User:
+#--------------------------------------------------------------
+# model = pickle.load(open("Saved_Models/LR_without_pp",'rb'))
+#--------------------------------------------------------------
+
+# Teacher model
+class Teacher:
     def __init__(self, username, password):
         self.username = username
         self.password = password
+
+# Student model
+class Student:
+    def __init__(self, name, email, marks):
+        self.name = name
+        self.email = email
+        self.marks = marks
 
 # For testing
 @app.route('/api/test', methods=['POST'])
@@ -53,7 +65,7 @@ def signup():
     if existing_user:
         return jsonify({'message': 'User already exists'}), 400
 
-    new_user = User(username, password)
+    new_user = Teacher(username, password)
     teachers.insert_one(new_user.__dict__)
     return jsonify({'message': 'User created successfully'}), 201
 
@@ -90,6 +102,55 @@ def logout():
 def protected():
     username = get_jwt_identity()
     return jsonify({'message': f'Protected route accessed by {username}'}), 200
+
+# Create a predict route
+@app.route('/api/predict', methods=['POST'])
+def predict():
+    data = request.get_json()
+    doc = data['doc']
+
+    try:
+        #----------------------------------
+        # prediction = model.predict([doc])
+        #----------------------------------
+        prediction = 80
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+    response = jsonify({'prediction': prediction})
+    return response, 200
+
+# Create a addStudent route
+@app.route('/api/addStudent', methods=['POST'])
+def addStudent():
+    data = request.get_json()
+    name = data['name']
+    email = data['email']
+    marks = data['marks']
+
+    if not name or not email or not marks:
+        return jsonify({'message': 'Studnet name, email and marks are required'}), 400
+
+    existing_user = students.find_one({'name': name})
+    if existing_user:
+        return jsonify({'message': 'Student already exists'}), 400
+
+    new_user = Student(name, email, marks)
+    students.insert_one(new_user.__dict__)
+    return jsonify({'message': f'Student-{name} created successfully'}), 201
+
+# Create a getStudents route
+@app.route('/api/getStudents', methods=['GET'])
+def getStudents():
+    student_list = students.find()
+    result = []
+    
+    for item in student_list:
+        # Convert ObjectId to string
+        item['_id'] = str(item['_id'])
+        result.append(item)
+    
+    return jsonify({'students': result}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
