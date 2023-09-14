@@ -22,8 +22,9 @@ title: Handwritten Essay Marking Software
 7. [Technology_Stack](#technology-stack)
 8. [Machine_Learning_Algorithm](#machine-learning-algorithm)
 9. [Project_Timeline](#project-timeline)
-10. [Team](#team)
-11. [Links](#links)
+10. [Product Owner](#product-owner)
+11. [Team Members](#team-members)
+12. [Links](#links)
 
 ---
 
@@ -61,11 +62,12 @@ The dataset we are using is ‘The Hewlett Foundation: Automated Essay Scoring D
 
 ## Technology Stack
 
-- Web Interface - Python Streamlit Framework.
-- Optical Character Recognition API - Azure Cloudvision.
-- Database - MongoDB.
-- Project Management - Azure DevOps.
-- ML Development - Pandas, Scikit-learn, Pandas, nltk, Numpy.
+- Frontend - Angular
+- Backend - Flask
+- Optical Character Recognition API - Azure Cloudvision
+- Database - MongoDB
+- Project Management - Azure DevOps
+- ML Development - Pandas, Scikit-learn, Keras, nltk, Numpy
 
 ## Machine Learning Algorithm
 
@@ -82,8 +84,10 @@ Processed dataset can be found in the file, **_Processed_data.csv_**
 <p align="center">
 <img src="./images/project_workflow.png"  width="800" height="450" ></p>
 
+## Product Owner
+- Mr. Sampath Deegalla, [sampath@eng.pdn.ac.lk](mailto:sampath@eng.pdn.ac.lk)
 
-## Team
+## Team Members
 
 - E/18/118, Haritha Gunarathna, [e18118@eng.pdn.ac.lk](mailto:e18118@eng.pdn.ac.lk)
 - E/18/203, Shehan Madhusanka, [e18203@eng.pdn.ac.lk](mailto:e18203@eng.pdn.ac.lk)
