@@ -92,6 +92,29 @@ Processed dataset can be found in the file, **_Processed_data.csv_**
 - Data storing, retrieval, deletion successfully reflect in the database.
 
 ### REST API Test Results
+- End Point : SignUp
+  <p align="center">
+  <img src="./images/Postman Testing/SignUP.png"  width="600" height="350" ></p>
+
+- End Point : LogIn
+  <p align="center">
+  <img src="./images/Postman Testing/Login.png"  width="600" height="350" ></p>
+
+- End Point : LogOut
+  <p align="center">
+  <img src="./images/Postman Testing/LogOut.png"  width="600" height="350" ></p>
+
+- End Point : Add Students
+  <p align="center">
+  <img src="./images/Postman Testing/AddStudent.png"  width="600" height="350" ></p>
+
+- End Point : Get Students
+  <p align="center">
+  <img src="./images/Postman Testing/GetStudents.png"  width="600" height="350" ></p>
+
+- End Point: Predict Marks
+  <p align="center">
+  <img src="./images/Postman Testing/Prediction.png"  width="600" height="350" ></p>
 
 ## Project Timeline
 
