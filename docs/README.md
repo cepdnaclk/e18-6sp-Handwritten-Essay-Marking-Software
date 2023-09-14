@@ -21,10 +21,11 @@ title: Handwritten Essay Marking Software
 6. [Use_Case_Diagram](#use-case-diagram)
 7. [Technology_Stack](#technology-stack)
 8. [Machine_Learning_Algorithm](#machine-learning-algorithm)
-9. [Project_Timeline](#project-timeline)
-10. [Product Owner](#product-owner)
-11. [Team Members](#team-members)
-12. [Links](#links)
+9. [Testing](#testing)
+10. [Project_Timeline](#project-timeline)
+11. [Product Owner](#product-owner)
+12. [Team Members](#team-members)
+13. [Links](#links)
 
 ---
 
@@ -77,6 +78,20 @@ Processed dataset can be found in the file, **_Processed_data.csv_**
 
 - Applying Machine Learning Algorithms
    * To prepare the data for machine learning algorithms, we used CountVectorizer to convert the essays into numeric form. Initially, we applied linear regression, SVR, and Random Forest without the additional features, resulting in high mean squared error. However, after including the extra features and reapplying CountVectorizer, the performance notably improved, particularly for Random Forest.
+
+
+## Testing
+
+### Tested Features
+- The application is launched without any crashes.
+- SignUp - User can sign up to the system successfully using a username and a password.
+- Login - User can login to the system successfully using his/her username & password.
+- Logout - User can logout successfully from the system.
+- Add Students - User can add students successfully under his/her account.
+- Predict Marks - User can successfully upload the images of the handwritten essays to the system and receive the predicted marks.
+- Data storing, retrieval, deletion successfully reflect in the database.
+
+### REST API Test Results
 
 ## Project Timeline
 
