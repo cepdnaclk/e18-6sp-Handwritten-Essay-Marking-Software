@@ -43,7 +43,7 @@ Bias and human error are also common concerns in manual essay marking. Human mar
 
 ## Aim
 
-"Design and develop a web interface to automate the process of grading handwritten essays by leveraging machine learning algorithms while ensuring fairness and consistency in evaluations."
+> ***"Design and develop a web interface to automate the process of grading handwritten essays by leveraging machine learning algorithms while ensuring fairness and consistency in evaluations."***
 
 ## Dataset
 
