@@ -4,9 +4,7 @@ from flask_jwt_extended import JWTManager, jwt_required, create_access_token, ge
 from pymongo import MongoClient
 from werkzeug.security import generate_password_hash, check_password_hash
 import datetime
-import pickle
 
-import Predictor
 from Predictor import predictMarks
 
 app = Flask(__name__)
@@ -24,15 +22,11 @@ client = MongoClient(MONGODB_URI)
 db = client['6SP-database']
 
 # Create a collection for teachers
-teachers = db['teacherss']
+teachers = db['teachers']
 students = db['students']
 
 # Setup Flask-JWT-Extended
 jwt = JWTManager(app)
-
-#--------------------------------------------------------------
-# model = pickle.load(open("Saved_Models/LR_without_pp",'rb'))
-#--------------------------------------------------------------
 
 # Teacher model
 class Teacher:
@@ -42,10 +36,11 @@ class Teacher:
 
 # Student model
 class Student:
-    def __init__(self, name, email, marks):
+    def __init__(self, name, email, marks, techername):
         self.name = name
         self.email = email
         self.marks = marks
+        self.techername = techername
 
 # For testing
 @app.route('/api/test', methods=['POST'])
@@ -113,9 +108,6 @@ def predict():
     doc = data['doc']
 
     try:
-        #----------------------------------
-        # prediction = model.predict([doc])
-        #----------------------------------
         prediction = predictMarks(doc)
     except Exception as e:
         return jsonify({'error': str(e)}), 500
@@ -130,30 +122,33 @@ def addStudent():
     name = data['name']
     email = data['email']
     marks = data['marks']
+    techername = data['techername']
 
     if not name or not email or not marks:
         return jsonify({'message': 'Studnet name, email and marks are required'}), 400
 
     existing_user = students.find_one({'name': name})
     if existing_user:
-        return jsonify({'message': 'Student already exists'}), 400
+        students.update_one({'name': name}, {'$set': {'marks': marks}})
+        return jsonify({'message': f'{name} marks updated!'}), 400
 
-    new_user = Student(name, email, marks)
+    new_user = Student(name, email, marks, techername)
     students.insert_one(new_user.__dict__)
     return jsonify({'message': f'Student-{name} created successfully'}), 201
 
 # Create a getStudents route
-@app.route('/api/getStudents', methods=['GET'])
+@app.route('/api/getStudents', methods=['POST'])
 def getStudents():
+    data = request.get_json()
+    teachername = data['teachername'] 
     student_list = students.find()
     result = []
     
     for item in student_list:
-        # Convert ObjectId to string
         item['_id'] = str(item['_id'])
         result.append(item)
     
-    return jsonify({'students': result}), 200
+    return jsonify({f'{teachername} - students': result}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
