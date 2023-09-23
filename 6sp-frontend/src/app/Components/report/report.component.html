@@ -1,0 +1,53 @@
+<!-- <app-report-item
+  *ngFor="let task of tasks"
+  [task]="task"
+  (onDeleteTask)="deleteTask(task)"
+  (onToggleReminder)="toggleReminder(task)"
+></app-report-item> -->
+<!-- <h1>works!</h1> -->
+<!-- <div class="container">
+
+  <app-report-item
+  *ngFor="let task of tasks"
+  [task]="task"
+  (onDeleteTask)="deleteTask(task)"
+  (onToggleReminder)="toggleReminder(task)"
+></app-report-item> -->
+  <!-- <div class="card">
+      <div class="card-header">Student 1</div>
+      <div class="card-content">
+          <p>Name: John Doe</p>
+          <p>Mark: 95</p>
+      </div>
+  </div>
+  <div class="card">
+      <div class="card-header">Student 2</div>
+      <div class="card-content">
+          <p>Name: Jane Smith</p>
+          <p>Mark: 88</p>
+      </div>
+  </div>
+  <div class="card">
+    <div class="card-header">Student 3</div>
+    <div class="card-content">
+        <p>Name: Jane Smith</p>
+        <p>Mark: 88</p>
+    </div>
+  </div> -->
+  <!-- Add more cards as needed -->
+<!-- </div> -->
+
+<div class="card-list">
+  <app-report-item *ngFor="let task of tasks;let i = index"
+  [task]="task"
+  (onDeleteTask)="deleteTask(task)"
+  class="student-card">
+      <div class="card-title">
+          Student {{ i+1 }}
+      </div>
+      <div class="card-body">
+          <p>Name: {{ task.name }}</p>
+          <p>Marks: {{ task.marks }}</p>
+      </div>
+  </app-report-item>
+</div>

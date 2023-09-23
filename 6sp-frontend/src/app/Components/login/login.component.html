@@ -1,0 +1,40 @@
+<div class="outer-box">
+  <!-- <h2>Login</h2>
+  <form>
+    <div class="form-row">
+      <div class="col-mx-auto mb-3">
+        <label class="label" for="validationServer01">Username:</label>
+        <input type="text" class="form-control rounded-pill inputStyle" id="validationServer01" placeholder="Username" required>
+
+      </div>
+      <div class="col-mx-auto mb-3 ">
+        <label class="label" for="validationServer02">Password:</label>
+        <input type="password" class="form-control rounded-pill inputStyle" id="validationServer02" placeholder="Password" required>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="submit" routerLink="/home">Login</button>
+  </form> -->
+
+  <div class="login-container">
+    <h1>Login</h1>
+    <form>
+        <div class="input-container">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+        <div class="input-container">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" routerLink="/home">Login</button>
+    </form>
+    <p class="signup-link">Don't have an account? <a [routerLink]="['/register']" >Sign up</a></p>
+  </div>
+  <div style="background-color: #0E1117;text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;">asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd</div>
+
+</div>
+
+

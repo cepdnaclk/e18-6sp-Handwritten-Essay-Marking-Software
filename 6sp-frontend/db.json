@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Haritha",
+      "email": "harithagunarathna.7@gmail.com",
+      "marks": 78
+    },
+    {
+      "id": 2,
+      "name": "Shehan",
+      "email": "shehanmadushanka@gmail.com",
+      "marks": 85
+    },
+    {
+      "id": 3,
+      "name": "Madushan",
+      "email": "madushanMora@gmail.com",
+      "marks": 83
+    },
+    {
+      "id": 4,
+      "name": "Kamal",
+      "email": "kamakNishantha@gmail.com",
+      "marks": 74
+    }
+  ]
+}
