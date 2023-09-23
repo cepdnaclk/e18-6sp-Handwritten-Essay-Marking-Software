@@ -1,0 +1,48 @@
+/* .task {
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.task.reminder {
+  border-left: 5px solid green;
+}
+
+.task h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+.card {
+  background-color: #0E1117;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 100%; /* Three cards horizontally with spacing */
+  margin-right: 40px; /* Add right margin for spacing between cards */
+  margin-bottom: 20px;
+  color: #fff;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card:last-child {
+  margin-right: 0; /* Remove right margin for the last card in a row */
+}
+
+.card-header {
+  background-color: #007bff;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content p {
+  margin: 0;
+}
+
+

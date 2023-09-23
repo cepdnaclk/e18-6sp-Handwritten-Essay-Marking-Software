@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  text-align: center;
+}
+
+h1 {
+  font-size: 72px;
+  margin: 0;
+  color: #5C5470;
+}
+
+p {
+  font-size: 32px;
+  margin: 20px 0;
+  color: #352F44;
+}
+
+.action-buttons {
+  margin-top: 30px;
+}
+
+.login-button,
+.register-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover,
+.register-button:hover {
+  background-color: #0056b3;
+}
+
+/* asdasd */
+
+.outer-box{
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 100px;
+  border-color: blanchedalmond;
+  border-style: solid;
+}
+
+.navbox{
+  width: 200px;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.result{
+  margin-bottom: 200px;
+}
+
+h2{
+  color: white;
+}
+
+/* ..asd */
+
+.outer-box{
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 100px;
+  border-color: blanchedalmond;
+  border-style: solid;
+}
+
+.navbox{
+  width: 200px;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.result{
+  margin-bottom: 200px;
+}
+
+h2{
+  color: white;
+}

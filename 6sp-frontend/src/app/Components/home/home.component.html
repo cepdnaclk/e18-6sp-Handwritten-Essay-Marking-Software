@@ -1,0 +1,53 @@
+<!-- <div class="outer-box">
+  <h2>Handwritten Essay Marking Software</h2>
+  <form>
+    <div class="form-row">
+      <div class="col-mx-auto mb-3">
+        <label class="label" for="validationServer01">First name:</label>
+        <input type="text" class="form-control rounded-pill inputStyle" id="validationServer01" placeholder="Name" required>
+
+      </div>
+      <div class="col-mx-auto mb-3 ">
+        <label class="label" for="validationServer02">Email address:</label>
+        <input type="email" class="form-control rounded-pill inputStyle" id="validationServer02" placeholder="Email Address" required>
+      </div>
+    </div>
+
+    <h3> Your Documents</h3>
+
+    <div class="custom-file mb-4">
+      <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+      <label class="custom-file-label" for="validatedCustomFile"></label>
+      <div class="invalid-feedback">Example invalid custom file feedback</div>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </form>
+
+  <hr style="color: gold;">
+
+  <div class="result mt-3">
+
+    <h2>Result</h2>
+
+  </div>
+</div> -->
+<div class="file-upload-container">
+  <h2 style="margin-left: 50px;margin-bottom: 20px;">Handwritten Essay Marking Software</h2>
+  <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="name" class="form-control" placeholder="Enter your name">
+  </div>
+  <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="email" class="form-control" placeholder="Enter your email">
+  </div>
+  <div class="form-group">
+      <label for="pdf">Upload PDF:</label>
+      <input type="file" id="pdf" (change)="onFileChange($event)" class="form-control">
+  </div>
+  <button class="btn btn-outline-danger btn-sm mt-3" type="submit" (click)="onSubmit()">Submit form</button>
+  <hr>
+  <h2>Result</h2>
+  <h2 *ngIf="marks !== 0">{{marks}}%</h2>
+</div>
